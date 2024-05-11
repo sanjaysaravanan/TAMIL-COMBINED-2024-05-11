@@ -1,0 +1,103 @@
+Types of Languages in SQL
+  DDL ( Data Definition Language ) vs DML ( Data Manipulation Language )
+
+  DDL: Defines the DB
+    Queries that allows to create the DB, Table with Data Model
+    EG: CREATE TABLE table_name (
+          column1 datatype,
+          column2 datatype,
+          column3 datatype,
+          ....
+        );
+        ALTER - Can only manipulate the definitions
+  
+  DML: Queries that allows the manipualtion of data in DB rows
+    EG:
+      Delete, insert, Select, Update
+
+SQL vs NoSql: ( Relational and Non Relational )
+  relational data and Queires are also Done in a structured way
+NoSQL:
+  Non Relational Data
+    No Structure for the DB, it allows the storing in few different ways
+    JSON, Graph, Key Value Pair
+
+MongoDB:
+  NoSql or Non Relational DB
+
+  Advantages of MongoDB:
+    1. No Joins Needed, structure is already related together
+       in one single table using the composite types
+    2. Flexible Schema/Model ( with help of third party library )
+       Blueprint of a table or Shape of the Data, 
+       Data in MongoDB has a flexible schema. **Collections do not 
+       enforce document structure by default**. This flexibility 
+       gives you data-modeling choices to match your application 
+       and its performance requirements.
+    3. BSON - Binary JSON, Simple JSON like structure stored as BSON 
+              that way optimizes the storage
+    4. Embedded Documents:
+        JSON/Array inside the Same Object
+
+  MongoDB                         SQL
+
+  Database                    -    Database
+
+  Collection                  -    Table
+  Document                    -    Row/Record ( primiitive data type )
+    Primitive, Composite( Non 
+    Primitive ) Datatypes( 
+    array, Object) are also
+    allowed
+  
+  Install and Test the MongoDB
+
+  Server:
+        https://www.mongodb.com/try/download/community ( Comes along with Compass)
+      Shell:
+        https://www.mongodb.com/try/download/shell
+    If Compass is not available after Server Installation:
+      Install Compass:
+        https://www.mongodb.com/try/download/compass
+
+  MongoShell:
+    Command Line Tool for Executing the Mongo Query Language  
+
+    Compass:
+      UI application for Viewing the DB
+
+
+Basic Queries in MongoDB:
+
+  _id is used by mongo as primary key to identify each & every document in the database
+
+  Shell Commands:
+
+    show dbs; // list all the databases in the mongodb
+
+    Create DB:
+      use <db-name>; // automatically create db reference
+    
+    insert data:
+      insertOne ( Object ), insertMany ( Array ) 
+
+      db.<collection-name>.insertOne/inserMany 
+      // automatically creates a collection as well
+
+    Select/Read Operation:
+      all:
+        db.<collection-name>.find(); // all the records of the collection
+      
+      filters few records:
+        db.<collection-name>.find(<query>, <projections>, <options>);
+          query is simple dictionary with key value pair
+    
+    
+Next:
+  sorting
+  aggregates
+
+Task:
+
+  Day 31:
+    MongoDB Day 1: https://docs.google.com/document/d/1yfQTicBMNV7thyzewyYSJWhTNw0pC4AkVhMGVCIP0LU/edit
